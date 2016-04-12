@@ -14,10 +14,6 @@ myFriends.forEach(function(ab) {
 
 //  console.log(pArray);
 
-var xArray = [];
-
-
-
 var nArray = [];
 //finding friends younger than Ellie
 pArray.forEach(function(ad) {
@@ -30,8 +26,12 @@ pArray.forEach(function(ad) {
 });
 console.log(nArray)
 
+xArray =[];
+
+//create a forEach loop to find the friends younger that Ellie.
 pArray.forEach(function(ac) {
-  if (ac[1] < 20) { //fnding the youngest
+
+  if (ac[1] < 20) {
     xArray.push({
       Name: ac[0],
       Age: Number(ac[1])
@@ -39,3 +39,21 @@ pArray.forEach(function(ac) {
   }
 });
 console.log(xArray, "are younger");
+
+
+var max = 0;
+var maxObj;
+    
+nArray.forEach(function(ac) {
+  console.log(ac.Age);
+  if(ac.Age > max){
+    max = ac.max;
+    
+    maxObj = {
+      Name:ac.Name,
+      Age:max
+    };
+  }
+ 
+});
+ console.log(maxObj);
